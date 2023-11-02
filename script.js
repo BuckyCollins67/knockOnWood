@@ -1,8 +1,7 @@
 gsap.registerPlugin(CSSPlugin);
 
 window.addEventListener('load', (event) => {
-    console.log('Page fully loaded');
-    // Initialization code that needs the whole page to be loaded
+    console.log('Page fully loaded');  // Initialization code that needs the whole page to be loaded
   });
 
 const graphic = document.querySelector('.graphic');
