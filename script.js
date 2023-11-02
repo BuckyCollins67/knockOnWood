@@ -40,3 +40,22 @@ document.addEventListener('click', function() {
   // Optionally, hide the graphic after a delay
   gsap.to(graphic, { autoAlpha: 0, delay: 1, onComplete: function() { graphic.style.display = 'none'; } });
 });
+
+// Initialize the knock counter from localStorage if it exists, otherwise start at 0
+let knockCounter = localStorage.getItem('knockCounter') ? parseInt(localStorage.getItem('knockCounter'), 10) : 0;
+document.getElementById('knockCount').textContent = `Knocks: ${knockCounter}`;
+
+// Function to increment the knock counter and update the display and localStorage
+function incrementKnockCounter() {
+  knockCounter++;
+  document.getElementById('knockCount').textContent = `You have knocked on wood ${knockCounter} times`;
+  localStorage.setItem('knockCounter', knockCounter.toString());
+}
+
+// Update the click listener to increment the knock counter
+document.addEventListener('click', function() {
+  // ... (rest of your existing click handler code)
+
+  // Increment the knock counter
+  incrementKnockCounter();
+});
