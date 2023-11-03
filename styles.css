@@ -7,22 +7,23 @@ body {
   }
 h1 {
     margin: 0%;
-    background-color: rgba(240, 248, 255, 0.253);
     font-family: 'Josefin Sans', sans-serif;
-    color: darkslategray;
+    color: grey;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-
-
+.background {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
 
 
 div {
     font-family: 'Josefin Sans', sans-serif;
-    color: darkslategray;
+    font-size: large;
+    color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
